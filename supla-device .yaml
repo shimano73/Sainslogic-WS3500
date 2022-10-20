@@ -3,13 +3,13 @@
 
 name: Wyse Sainslogic 
 log_level: verbose
-state_files_path: "/home/dariusz/.supla-device"
+state_files_path: "/home/supla/.supla-device"
 security_level: 2 	 
 
 
 supla:
   server: svr1.supla.org
-  mail: dariuszjszymanski@gmail.com
+  mail: user_suplai@email.com
 
 
 
