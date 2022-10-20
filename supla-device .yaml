@@ -8,7 +8,7 @@ security_level: 2
 
 
 supla:
-  server: svr1.supla.org
+  server: svrX.supla.org
   mail: user_supla@email.com
 
 
