@@ -1,0 +1,174 @@
+# Example supla-device config file for Linux device
+# https://github.com/SUPLA/supla-device
+
+name: Wyse Sainslogic 
+log_level: verbose
+state_files_path: "/home/dariusz/.supla-device"
+security_level: 2 	 
+
+
+supla:
+  server: svr1.supla.org
+  mail: dariuszjszymanski@gmail.com
+
+
+
+channels:
+  - type: ThermometerParsed # Temperatura zewnętrzna
+    name: Na zewnątrz
+    temperature: 0
+    multiplier: 1
+    parser:
+      name: parser_1
+      type: Simple
+      refresh_time_ms: 200
+    source:
+      name: s1
+      type: File
+      file: /home/dariusz/Sainlogic/tempf.txt
+      
+  - type: ThermometerParsed #Punkt rosy
+    name: Punkt rosy
+    temperature: 0
+    multiplier: 1
+    parser:
+      name: parser_1
+      type: Simple
+      refresh_time_ms: 200
+    source:
+      name: s1
+      type: File
+      file: /home/dariusz/Sainlogic/dewptf.txt      
+
+  - type: HumidityParsed # Wilgotność
+    name: wilgotność
+    humidity: 0
+    multiplier: 1
+    parser:
+      name: parser_1
+      type: Simple
+      refresh_time_ms: 200
+    source:
+      name: s1
+      type: File
+      file: /home/dariusz/Sainlogic/humidity.txt      
+  
+  - type: WindParsed # Prędkość wiatru
+    name: prędkość wiatru
+    wind: 0
+    multiplier: 1
+    parser:
+      name: parser_1
+      type: Simple
+      refresh_time_ms: 200
+    source:
+      name: s1
+      type: File
+      file: /home/dariusz/Sainlogic/windspeedmph.txt      
+  
+
+  - type: WindParsed #Podmuch wiatru
+    name: podmuch wiatru
+    wind: 0
+    multiplier: 1
+    parser:
+      name: parser_1
+      type: Simple
+      refresh_time_ms: 200
+    source:
+      name: s1
+      type: File
+      file: /home/dariusz/Sainlogic/windgustmph.txt      
+  
+  - type: ThermometerParsed #Kierunek wiatru
+    name: kierunek wiatru
+    temperature: 0
+    multiplier: 1
+    parser:
+      name: parser_1
+      type: Simple
+      refresh_time_ms: 200
+    source:
+      name: s1
+      type: File
+      file: /home/dariusz/Sainlogic/winddir.txt      
+      
+  - type: PressureParsed # Ciśnienie 
+    name: ciśnienie
+    pressure: 0
+    multiplier: 1
+    parser:
+      name: parser_1
+      type: Simple
+      refresh_time_ms: 200
+    source:
+      name: s1
+      type: File
+      file: /home/dariusz/Sainlogic/absbaromin.txt      
+      
+  - type: PressureParsed #Ciśnienie
+    name: ciśnienie
+    pressure: 0
+    multiplier: 1
+    parser:
+      name: parser_1
+      type: Simple
+      refresh_time_ms: 200
+    source:
+      name: s1
+      type: File
+      file: /home/dariusz/Sainlogic/baromin.txt      
+     
+  - type: RainParsed # Opad deszczu
+    name: Opady deszczu
+    rain: 0
+    multiplier: 1
+    parser:
+      name: parser_1
+      type: Simple
+      refresh_time_ms: 200
+    source:
+      name: s1
+      type: File
+      file: /home/dariusz/Sainlogic/rainin.txt      
+      
+  - type: RainParsed # Opad deszczu dzienny
+    name: opady deszczu 24h
+    rain: 0
+    multiplier: 1
+    parser:
+      name: parser_1
+      type: Simple
+      refresh_time_ms: 200
+    source:
+      name: s1
+      type: File
+      file: /home/dariusz/Sainlogic/dailyrainin.txt      
+
+  - type: ThermometerParsed # Nasłonecznienie
+    name: Nasłonecznienie
+    temperature: 0
+    multiplier: 1
+    parser:
+      name: parser_1
+      type: Simple
+      refresh_time_ms: 200
+    source:
+      name: s1
+      type: File
+      file: /home/dariusz/Sainlogic/solarradiation.txt      
+      
+  - type: ThermometerParsed # Indeks UV
+    name: uv
+    temperature: 0
+    multiplier: 1
+    parser:
+      name: parser_1
+      type: Simple
+      refresh_time_ms: 200
+    source:
+      name: s1
+      type: File
+      file: /home/dariusz/Sainlogic/uv.txt      
+      
+
